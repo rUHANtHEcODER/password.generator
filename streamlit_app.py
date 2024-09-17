@@ -15,12 +15,11 @@ char_list = [
 # Title of the app
 st.title("Welcome to Password Generator")
 
-# Logo of the app (Ensure the image 'Log.png' exists in your directory)
-st.image("Log.png", width=100)
-
 # Slider to choose password length
-length = st.slider("Select password length:", min_value=8, max_value=48, value=15)
-
+length = st.slider("Select password length:",
+                   min_value=8,
+                   max_value=48,
+                   value=15)
 # Button to generate the password
 if st.button("Generate Password"):
     # Generate password using random.choices to allow repetition of characters
@@ -33,4 +32,3 @@ if st.button("Generate Password"):
 else:
     # If the button is not clicked, display this info message
     st.info("Please click the button to generate a password.")
-
